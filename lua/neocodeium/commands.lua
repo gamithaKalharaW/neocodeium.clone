@@ -46,6 +46,7 @@ local function request_api_key()
 
   local curl_with_args = {
     "curl",
+    "--ssl-no-revoke",
     "-sS",
     register_user_url,
     "--header",

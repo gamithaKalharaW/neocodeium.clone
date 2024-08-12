@@ -4,7 +4,7 @@ local M = {}
 ---Returns codeium config directory
 ---@return filepath
 function M.dir()
-  local config_dir = os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config"
+  local config_dir = os.getenv("XDG_CONFIG_HOME") or os.getenv("HOMEPATH") .. "/.config"
   return config_dir .. "/codeium"
 end
 
@@ -15,7 +15,7 @@ function M.data_dir()
   if data_dir then
     return data_dir .. "/codeium"
   else
-    return os.getenv("HOME") .. "/.codeium"
+    return os.getenv("HOMEPATH") .. "/.codeium"
   end
 end
 
